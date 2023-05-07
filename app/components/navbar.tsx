@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
@@ -11,6 +10,9 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   XMarkIcon,
+  ArrowUpIcon,
+  ArrowUturnUpIcon,
+  ArrowLongUpIcon,
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -23,19 +25,19 @@ const products = [
     name: "Stage1",
     description: "Establish a daily meditation practice",
     href: "/stage1",
-    icon: ChartPieIcon,
+    icon: ArrowUturnUpIcon,
   },
   {
     name: "Stage2",
     description: "Reduce Mind wandering",
     href: "/stage2",
-    icon: CursorArrowRaysIcon,
+    icon: ArrowUpIcon,
   },
   {
     name: "Stage3",
     description: "Reduce Forgetting",
     href: "stage3",
-    icon: FingerPrintIcon,
+    icon: ArrowLongUpIcon,
   },
 ];
 const callsToAction = [
@@ -50,15 +52,15 @@ function classNames(...classes: any[]) {
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="bg-white">
+    <header className="bg-white border-b-2">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <b>TMImeditation</b>
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -98,7 +100,7 @@ export default function Navbar() {
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          className="h-6 w-6 text-gray-600 group-hover:text-orange-600"
                           aria-hidden="true"
                         />
                       </div>
