@@ -128,7 +128,7 @@ export default function Stage1() {
             <p className="pt-6">
               <Link
                 href="/stage1/theory"
-                className="bg-orange-600 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mr-4"
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
               >
                 Theory
               </Link>

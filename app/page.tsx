@@ -38,8 +38,8 @@ export default function LandingPage() {
   return (
     <div>
       <Navbar />
-      <div className="bg-white py-5 sm:py-20 ">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="bg-white py-10 sm:py-20 ">
+        <div className="mx-auto max-w-7xl p x-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-light leading-7 text-orange-600">
               Based on{" "}
