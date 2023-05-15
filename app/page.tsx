@@ -1,81 +1,124 @@
+import Link from "next/link";
 import Navbar from "./../app/components/navbar";
+import Image from "next/image";
 
-import {
-  PlayIcon,
-  ArrowTrendingUpIcon,
-  UserIcon,
-  MegaphoneIcon,
-} from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const features = [
   {
-    name: "Theory",
-    description:
-      "Concise and simple explanation of each stage's science, goals, and specific techniques relevant to goal.",
-    icon: PlayIcon,
+    name: "Stage1",
+    description: "Establishing a Practice",
+    icon: ChevronRightIcon,
   },
   {
-    name: "Practice",
-    description:
-      "Longs and short Guided meditations, meditation timer, and journaling to help you cultivate your practice.",
-    icon: ArrowTrendingUpIcon,
+    name: "Stage2",
+    description: "Interrupted Attention and Overcoming Mind-Wandering",
+    icon: ChevronRightIcon,
   },
   {
-    name: "Mentoring",
-    description:
-      "Talk to experience meditatators to help you with your practice and answer any questions you may have.",
-    icon: UserIcon,
+    name: "Stage3",
+    description: "Extended Attention and Overcoming Forgetting",
+    icon: ChevronRightIcon,
   },
   {
-    name: "Resources",
+    name: "Stage4",
     description:
-      "Recommendation and resources to strengthen practice in each stage.",
-    icon: MegaphoneIcon,
+      "Continuous Attention and Overcoming Gross Distraction and Strong Dullness",
+    icon: ChevronRightIcon,
+  },
+  {
+    name: "Stage5",
+    description: "Overcoming Subtle Dullness and Increasing Mindfulness",
+    icon: ChevronRightIcon,
+  },
+
+  {
+    name: "Stage6",
+    description: "Subduing Subtle Distraction",
+    icon: ChevronRightIcon,
+  },
+
+  {
+    name: "Stage7",
+    description: "Exclusive Attention and Unifying the Mind",
+    icon: ChevronRightIcon,
+  },
+
+  {
+    name: "Stage8",
+    description: "Mental Pliancy and Pacifying the Senses",
+    icon: ChevronRightIcon,
+  },
+
+  {
+    name: "Stage9",
+    description:
+      "Mental and Physical Pliancy and Calming the Intensity of Meditative Joy",
+    icon: ChevronRightIcon,
+  },
+  {
+    name: "Stage10",
+    description: "Tranquility and Equanimity",
+    icon: ChevronRightIcon,
   },
 ];
 
 export default function LandingPage() {
   return (
-    <div>
+    <div className="bg-white">
       <Navbar />
-      <div className="bg-white py-10 sm:py-20 ">
-        <div className="mx-auto max-w-7xl p x-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-light leading-7 text-orange-600">
-              Based on{" "}
-              <span className="font-bold underline">The mind illuminated </span>
-              and Samatha tradition
-            </h2>
-            <p className="mt-2 text-xl font-bold tracking-tight text-gray-900 sm:text-4xl text-orange-600">
-              Cultivate meditation practice systematically
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Discover the transformative power of meditation with The Mind
-              Illuminated and the Samatha tradition. This practical and
-              systematic approach will guide you through nine stages of
-              meditation, helping you cultivate greater concentration, clarity,
-              and equanimity.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              {features.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
+
+      <div className="overflow-hidden bg-white py-24 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            <div className="lg:pr-8 lg:pt-4">
+              <div className="lg:max-w-lg">
+                <h2 className="text-base font-light leading-7 text-orange-700 underline">
+                  Based on{" "}
+                  <span className="font-bold ">The mind illuminated </span>
+                  and Samatha tradition
+                </h2>
+                <p className="mt-2 text-xl font-bold tracking-tight text-gray-900 sm:text-2xl text-orange-700">
+                  Cultivate strong meditation practice through ten progressive
+                  stages
+                </p>
+
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  Based on traditional Samatha meditation and scientific
+                  approach of The Mind Illuminated, this website will
+                  systematically guide you through ten stages of Samatha
+                  meditation(also refered as Anna panna or concentration
+                  meditation).
+                </p>
+                <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                  {features.map((feature) => (
+                    <div key={feature.name} className="relative pl-9">
+                      <Link
+                        href={`/${feature.name.toLowerCase()}`}
+                        key={feature.name}
+                        className="hover:text-orange-600"
+                      >
+                        <dt className="inline font-semibold text-orange-700">
+                          <feature.icon
+                            className="absolute left-1 top-1 h-5 w-5 text-orange-700"
+                            aria-hidden="true"
+                          />
+                          {feature.name}
+                        </dt>{" "}
+                        <dd className="inline">{feature.description}</dd>
+                      </Link>
                     </div>
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
-                    {feature.description}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+                  ))}
+                </dl>
+              </div>
+            </div>
+            <img
+              src="/samatha.jpeg"
+              alt="Product screenshot"
+              className="w-[10rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[42rem] md:-ml-4 lg:-ml-0"
+              width={600}
+              height={1000}
+            />
           </div>
         </div>
       </div>
