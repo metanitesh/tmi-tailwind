@@ -1,33 +1,43 @@
 import Link from "next/link";
 import React from "react";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
-import { PlayIcon, ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
+import {
+  NoSymbolIcon,
+  AcademicCapIcon,
+  MapIcon,
+  FlagIcon,
+  TrophyIcon,
+} from "@heroicons/react/24/outline";
+import Navbar from "../components/navbar";
 
 const features = [
+  {
+    name: "Goal",
+    description: "Develop a regular meditation practice.",
+    icon: FlagIcon,
+  },
   {
     name: "Obstacles",
     description:
       "Resistance, procrastination, fatigue, impatience, boredom, lack of motivation.",
-    icon: PlayIcon,
+    icon: NoSymbolIcon,
   },
   {
     name: "Skills",
     description:
       "Creating practice routines, setting specific practice goals, generating strong motivation, cultivating discipline and diligence.",
-    icon: ArrowTrendingUpIcon,
+    icon: AcademicCapIcon,
   },
-  {
-    name: "Techniques",
-    description: "Six-Point Preparation for Meditation",
-    icon: ArrowTrendingUpIcon,
-  },
+  // {
+  //   name: "Techniques",
+  //   description:
+  //     "Six-Point Preparation for Meditation, A Gradual Four-Step Transition to the Meditation Object",
+  //   icon: MapIcon,
+  // },
   {
     name: "Mastery",
     description: "Never missing a daily practice session",
-    icon: ArrowTrendingUpIcon,
+    icon: TrophyIcon,
   },
 ];
 
@@ -62,52 +72,7 @@ export default function Stage1() {
   return (
     <>
       <header className="bg-white">
-        <nav
-          className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
-        >
-          <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <b>TMImeditation</b>
-            </Link>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link
-              href="/stage1/theory"
-              className="text-sm font-semibold leading-6 text-gray-900 pr-6"
-            >
-              Theory
-            </Link>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900 pr-6"
-            >
-              Practice
-            </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900 pr-6"
-            >
-              Mentoring
-            </a>
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Account
-            </a>
-          </div>
-        </nav>
+        <Navbar></Navbar>
       </header>
       <div className="bg-white py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -116,16 +81,16 @@ export default function Stage1() {
               Stage1
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Develop a regular meditation practice.
+              Establishing a practice
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               This Stage is about developing a consistent and diligent
               meditation practice. Being consistent means setting a clear daily
-              schedule for when you’re going tx§o meditate, and sticking to it.
+              schedule for when you are going meditate, and sticking to it.
               Diligence means engaging wholeheartedly in the practice rather
               than spending your time on the cushion planning or daydreaming.
             </p>
-            <p className="pt-6">
+            {/* <p className="pt-6">
               <Link
                 href="/stage1/theory"
                 className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
@@ -144,7 +109,7 @@ export default function Stage1() {
               >
                 Mentoring
               </Link>
-            </p>
+            </p> */}
           </div>
           {/* <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
@@ -171,12 +136,12 @@ export default function Stage1() {
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
-                    {/* <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-600">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg">
                       <feature.icon
-                        className="h-6 w-6 text-white"
+                        className="h-6 w-6 text-orange-600 font-bold"
                         aria-hidden="true"
                       />
-                    </div> */}
+                    </div>
                     {feature.name}
                   </dt>
                   <dd className="mt-2 text-base leading-7 text-gray-600">
