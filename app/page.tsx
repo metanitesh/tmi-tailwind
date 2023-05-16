@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Navbar from "./../app/components/navbar";
-import Image from "next/image";
 
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
@@ -56,11 +55,6 @@ const features = [
       "Mental and Physical Pliancy and Calming the Intensity of Meditative Joy",
     icon: ChevronRightIcon,
   },
-  {
-    name: "Stage10",
-    description: "Tranquility and Equanimity",
-    icon: ChevronRightIcon,
-  },
 ];
 
 export default function LandingPage() {
@@ -89,8 +83,8 @@ export default function LandingPage() {
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   Based on traditional Samatha meditation and scientific
                   approach of The Mind Illuminated, this website will
-                  systematically guide you through ten stages of Samatha
-                  meditation(also refered as Anna panna or concentration
+                  systematically guide you through Nine stages of Samatha
+                  meditation(also refered as Anna Panna or concentration
                   meditation).
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">

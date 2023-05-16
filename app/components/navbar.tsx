@@ -29,14 +29,50 @@ const products = [
   },
   {
     name: "Stage2",
-    description: "Reduce Mind wandering",
+    description: "Overcome Mind wandering",
     href: "/stage2",
     icon: ArrowUpIcon,
   },
   {
     name: "Stage3",
-    description: "Reduce Forgetting",
-    href: "stage3",
+    description: "Overcome Forgetting",
+    href: "/stage3",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage4",
+    description: "Overcome Gross Distraction and Strong Dullness",
+    href: "/stage4",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage5",
+    description: "Overcome subtle dullness",
+    href: "/stage5",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage6",
+    description: "Overcome subtle distraction",
+    href: "/stage6",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage7",
+    description: "Unification of mind",
+    href: "/stage7",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage8",
+    description: "Pacifying the Senses",
+    href: "/stage8",
+    icon: ArrowLongUpIcon,
+  },
+  {
+    name: "Stage9",
+    description: "Calming Meditative Joy",
+    href: "/stage9",
     icon: ArrowLongUpIcon,
   },
 ];
@@ -98,12 +134,12 @@ export default function Navbar() {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      {/* <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <item.icon
                           className="h-6 w-6 text-gray-600 group-hover:text-orange-600"
                           aria-hidden="true"
                         />
-                      </div>
+                      </div> */}
                       <div className="flex-auto">
                         <Link
                           href={item.href}
@@ -169,12 +205,12 @@ export default function Navbar() {
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      {/* <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <item.icon
                           className="h-6 w-6 text-gray-600 group-hover:text-orange-600"
                           aria-hidden="true"
                         />
-                      </div>
+                      </div> */}
                       <div className="flex-auto">
                         <Link
                           href={item.href}
