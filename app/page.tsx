@@ -84,8 +84,7 @@ export default function LandingPage() {
                   Based on traditional Samatha meditation and scientific
                   approach of The Mind Illuminated, this website will
                   systematically guide you through Nine stages of Samatha
-                  meditation(also refered as Anna Panna or concentration
-                  meditation).
+                  meditation
                 </p>
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   {features.map((feature) => (
