@@ -12,18 +12,18 @@ import Navbar from "../components/navbar";
 const features = [
   {
     name: "Goal",
-    description: "Overcome forgetting and falling asleep",
+    description: "Overcome forgetting and falling asleep.",
     icon: FlagIcon,
   },
   {
     name: "Obstacles",
-    description: "Distractions, forgetting, mind-wandering, and sleepiness",
+    description: "Distractions, forgetting, mind-wandering, and sleepiness.",
     icon: NoSymbolIcon,
   },
   {
     name: "Skills",
     description:
-      "Use the techniques of following the breath and connecting to extend the periods of uninterrupted attention, practices of labeling and checking in to stop forgetting",
+      "Following the breath, connecting the breath, labeling and checking in.",
     icon: AcademicCapIcon,
   },
 
@@ -47,13 +47,14 @@ export default function Stage2() {
               Stage3
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Extended attention and overcoming forgetting
+              Overcome forgetting
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Stages Two and Three are similar, but mind-wandering gets shorter
-              and shorter until it stops altogether. The biggest challenge
-              during this Stage is forgetting, but sleepiness often becomes a
-              problem as well.
+              The goal for Stage Three is to overcome forgetting and falling
+              asleep, cultivate the faculty of mindfulness to detect distraction
+              and dullness, and make corrections as soon as you notice their
+              presence. once it becomes a habit you will rarely forget the
+              breath.
             </p>
           </div>
 

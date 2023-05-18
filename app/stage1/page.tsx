@@ -25,7 +25,7 @@ const features = [
   {
     name: "Skills",
     description:
-      "Creating practice routines, setting specific practice goals, generating strong motivation, cultivating discipline and diligence.",
+      "Six-Point Preparation for Meditation. A Gradual Four-Step Transition to breathing. Counting breath",
     icon: AcademicCapIcon,
   },
   // {
@@ -84,7 +84,7 @@ export default function Stage1() {
               Establishing a practice
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              This Stage is about developing a consistent and diligent
+              The goal for Stage One is to developing a consistent and diligent
               meditation practice. Being consistent means setting a clear daily
               schedule for when you are going meditate, and sticking to it.
               Diligence means engaging wholeheartedly in the practice rather

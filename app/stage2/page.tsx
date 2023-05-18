@@ -13,7 +13,7 @@ const features = [
   {
     name: "Goal",
     description:
-      "Shorten the periods of mind-wandering and extend the periods of sustained attention to the meditation object.",
+      "Shorten the periods of mind-wandering and extend the periods of sustained attention to the breath.",
     icon: FlagIcon,
   },
   {
@@ -23,8 +23,7 @@ const features = [
   },
   {
     name: "Skills",
-    description:
-      "Positively reinforce aha moment when you realize you've been distracted.",
+    description: "Positive reinforcement of aha moments. Following the breath.",
     icon: AcademicCapIcon,
   },
 
@@ -49,16 +48,16 @@ export default function Stage2() {
               Stage2
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Interrupted attention and overcoming mind wandering
+              Overcome mind wandering
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Stage Two involves the simple practice of keeping your attention
-              on the breath. This is easier said than done. You will discover
-              that attention is easily captured by a distraction, making you
-              forget that you're supposed to be paying attention to the breath.
-              Forgetting quickly leads to mind-wandering, which can last a few
-              seconds, several minutes to the entire meditation session. In
-              Stage Two, you only work with mind-wandering.
+              The goal for Stage Two is to shorten the periods of mind-wandering
+              and extend the periods of sustained attention to the meditation
+              object. Willpower can’t prevent the mind from forgetting the
+              breath. Nor can you force yourself to become aware that the mind
+              is wandering. Instead, just hold the intention to appreciate the
+              “aha” moment that recognizes mind- wandering, while gently but
+              firmly redirecting attention back to the breath.
             </p>
           </div>
 

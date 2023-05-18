@@ -49,8 +49,7 @@ export default function Stage2() {
               Stage4
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Continuous attention and overcoming gross distraction and strong
-              dullness
+              Overcome gross distraction and strong dullness
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               You can stay focused on the breath more or less continuously, but
