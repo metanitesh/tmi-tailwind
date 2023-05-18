@@ -11,48 +11,46 @@ const features = [
   },
   {
     name: "Stage2",
-    description: "Interrupted Attention and Overcoming Mind-Wandering",
+    description: "Overcome Mind wandering",
     icon: ChevronRightIcon,
   },
   {
     name: "Stage3",
-    description: "Extended Attention and Overcoming Forgetting",
+    description: "Overcome Forgetting",
     icon: ChevronRightIcon,
   },
   {
     name: "Stage4",
-    description:
-      "Continuous Attention and Overcoming Gross Distraction and Strong Dullness",
+    description: "Overcome Gross Distraction and Strong Dullness",
     icon: ChevronRightIcon,
   },
   {
     name: "Stage5",
-    description: "Overcoming Subtle Dullness and Increasing Mindfulness",
+    description: "Overcome subtle dullness",
     icon: ChevronRightIcon,
   },
 
   {
     name: "Stage6",
-    description: "Subduing Subtle Distraction",
+    description: "Overcome subtle distraction",
     icon: ChevronRightIcon,
   },
 
   {
     name: "Stage7",
-    description: "Exclusive Attention and Unifying the Mind",
+    description: "Unification of mind",
     icon: ChevronRightIcon,
   },
 
   {
     name: "Stage8",
-    description: "Mental Pliancy and Pacifying the Senses",
+    description: "Pacifying the Senses",
     icon: ChevronRightIcon,
   },
 
   {
     name: "Stage9",
-    description:
-      "Mental and Physical Pliancy and Calming the Intensity of Meditative Joy",
+    description: "Calming Meditative Joy",
     icon: ChevronRightIcon,
   },
 ];
@@ -76,7 +74,7 @@ export default function LandingPage() {
                   <span className="font-bold">
                     stable and focused attention
                   </span>{" "}
-                  through ten progressive stages of
+                  in Nine progressive stages of
                   <span className="font-bold"> Samatha meditation</span>
                 </p>
 
