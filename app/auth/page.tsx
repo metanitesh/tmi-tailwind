@@ -2,8 +2,10 @@
 
 import React, { useEffect } from "react";
 import Navbar from "../components/navbar";
+import { useAnalytics } from "@happykit/analytics";
 
 export default function Auth() {
+  useAnalytics({ publicKey: "analytics_pub_8cc6e8d314" });
   const [mode, setMode] = React.useState("signin");
   const [username, setUsername] = React.useState("test");
   const [password, setPassword] = React.useState("test");
