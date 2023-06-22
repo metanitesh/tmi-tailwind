@@ -38,6 +38,8 @@ export async function POST(request: Request, response: Response) {
     }
 
     console.log("jwt");
+    console.log(process.env);
+    console.log(process.env.JWT_SECRET);
     if (!process.env.JWT_SECRET) {
       throw new Error("JWT_SECRET not found");
     }
