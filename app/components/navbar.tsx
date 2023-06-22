@@ -98,6 +98,7 @@ export default function Navbar() {
             <b>TMImeditation</b>
           </Link>
         </div>
+
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -108,6 +109,7 @@ export default function Navbar() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-orange-700">
@@ -177,6 +179,14 @@ export default function Navbar() {
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div> */}
+        <div className="flex">
+          <Link
+            href="/auth"
+            className="-m-1.5 p-10 text-sm font-semibold leading-6 text-orange-700"
+          >
+            Sign up
+          </Link>
+        </div>
       </nav>
       <Dialog
         as="div"

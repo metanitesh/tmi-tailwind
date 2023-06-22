@@ -1,6 +1,34 @@
 "use client";
 
+import React, { useEffect } from "react";
+import Navbar from "../components/navbar";
+
 export default function Auth() {
+  const [mode, setMode] = React.useState("signin");
+  const [username, setUsername] = React.useState("test");
+  const [password, setPassword] = React.useState("test");
+  const [res, setRes] = React.useState("");
+
+  const handleAuth = async (e: any) => {
+    e.preventDefault();
+    let url = "api/register";
+
+    if (mode === "signin") {
+      url = "api/login";
+    }
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const userResponse: { message: string } = await res.json();
+    setRes(userResponse.message);
+  };
+
   return (
     <>
       {/*
@@ -11,24 +39,23 @@ export default function Auth() {
           <body class="h-full">
           ```
         */}
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <header className="bg-white">
+        <Navbar></Navbar>
+      </header>
+
+      <div className="bg-white py-10 sm:py-10">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-center text-orange-700 sm:text-2xl">
+            {mode === "signup" ? "Sign up" : "Sign in"} to your account
           </h2>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6">
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="mt-6 text-lg leading-2 text-gray-600"
               >
                 Email address
               </label>
@@ -39,7 +66,8 @@ export default function Auth() {
                   type="email"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                  onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
             </div>
@@ -48,27 +76,28 @@ export default function Auth() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className=" text-lg leading-2 text-gray-600"
                 >
                   Password
                 </label>
-                <div className="text-sm">
+                {/* <div className="text-sm">
                   <a
                     href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
+                    className="font-semibold text-orange-600 hover:text-orange-500"
                   >
                     Forgot password?
                   </a>
-                </div>
+                </div> */}
               </div>
-              <div className="mt-2">
+              <div className="">
                 <input
                   id="password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:text-orange-600 sm:text-sm sm:leading-6"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>
@@ -76,10 +105,13 @@ export default function Auth() {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-orange-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:text-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+                onClick={handleAuth}
               >
-                Sign in
+                {mode === "signup" ? "Sign up" : "Sign in"}
               </button>
+
+              <h3 className="text-center text-orange-700 mt-4">{res}</h3>
             </div>
           </form>
 
@@ -87,9 +119,12 @@ export default function Auth() {
             Not a member?{" "}
             <a
               href="#"
-              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+              className="font-semibold leading-6 text-orange-600 hover:text-orange-500"
+              onClick={() =>
+                setMode((mode) => (mode === "signin" ? "signup" : "signin"))
+              }
             >
-              Singup
+              {mode === "signup" ? "Sign in" : "Sign Up"}
             </a>
           </p>
         </div>
