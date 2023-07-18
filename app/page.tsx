@@ -61,7 +61,7 @@ export default function LandingPage() {
     <div className="bg-white">
       <Navbar />
       <Analytics />
-      <div className="overflow-hidden bg-white py-24 sm:py-16">
+      <div className="overflow-hidden bg-white py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
@@ -109,10 +109,8 @@ export default function LandingPage() {
             </div>
             <img
               src="/samatha.jpeg"
-              alt="Product screenshot"
-              className="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[42rem] md:-ml-4 lg:-ml-0"
-              width={600}
-              height={1000}
+              alt="samatha meditation picture"
+              className="max-w rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
             />
           </div>
         </div>
