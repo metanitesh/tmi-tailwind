@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -8,6 +9,8 @@ import {
   TrophyIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
+import VideosLink from "../components/videosLink";
+import Modal from "../components/modal";
 
 const features = [
   {
@@ -38,11 +41,14 @@ const features = [
 ];
 
 export default function Stage2() {
+  const [open, setOpen] = React.useState(false);
+  const [url, setUrl] = React.useState("");
   return (
     <>
       <header className="bg-white">
         <Navbar></Navbar>
       </header>
+      <Modal open={open} setOpen={setOpen} url={url} />
       <div className="bg-white py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
@@ -62,6 +68,14 @@ export default function Stage2() {
               experience only a shallow facsimile of the later Stages, and your
               practice will come to a dead end. To overcome subtle dullness, you
               must sharpen your faculties of attention and awareness.
+            </p>
+            <p className="pt-6">
+              <VideosLink
+                isExplanation={true}
+                explanationUrl="https://www.youtube.com/embed/F90FXRtx2JA"
+                setOpen={setOpen}
+                setUrl={setUrl}
+              />
             </p>
           </div>
 

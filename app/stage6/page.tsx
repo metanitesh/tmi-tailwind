@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -8,6 +9,8 @@ import {
   TrophyIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
+import VideosLink from "../components/videosLink";
 
 const features = [
   {
@@ -38,11 +41,15 @@ const features = [
 ];
 
 export default function Stage2() {
+  const [open, setOpen] = React.useState(false);
+  const [url, setUrl] = React.useState("");
+
   return (
     <>
       <header className="bg-white">
         <Navbar></Navbar>
       </header>
+      <Modal open={open} setOpen={setOpen} url={url} />
       <div className="bg-white py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
@@ -59,6 +66,14 @@ export default function Stage2() {
               level where subtle distractions fall away completely. You will
               achieve exclusive attention to the meditation object, also called
               single- pointed attention.
+            </p>
+            <p className="pt-6">
+              <VideosLink
+                isExplanation={true}
+                explanationUrl="https://www.youtube.com/embed/Ls9lr6Qv6jQ"
+                setOpen={setOpen}
+                setUrl={setUrl}
+              />
             </p>
           </div>
 

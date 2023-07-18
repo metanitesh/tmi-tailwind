@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";
+import VideosLink from "../components/videosLink";
 
 const features = [
   {
@@ -65,6 +66,14 @@ export default function Stage2() {
               the mind grows calm, there tends to be another problem, strong
               dullness. To deal with both of these challenges, you develop
               continuous introspective awareness to alert you to their presence.
+            </p>
+            <p className="pt-6">
+              <VideosLink
+                isExplanation={true}
+                explanationUrl="https://www.youtube.com/embed/BdbmDQffZYQ"
+                setOpen={setOpen}
+                setUrl={setUrl}
+              />
             </p>
           </div>
 
