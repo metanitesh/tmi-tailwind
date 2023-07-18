@@ -88,7 +88,7 @@ export default function Navbar() {
       >
         <div className="flex flex-col gap-y-2 justify-between w-full sm:flex-row">
           <Link href="/" className=" text-orange-700 grow">
-            <b>TMImeditation</b>
+            <b>TMI Meditation</b>
           </Link>
 
           <Popover.Group className=" lg:flex lg:gap-x-12 pr-10">
