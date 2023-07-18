@@ -12,10 +12,10 @@ export default function VideosLink(props: any) {
     meditationUrl,
   } = props;
   return (
-    <>
+    <div className="flex flex-col items-stretch gap-y-2 px-20 sm:p-0 sm:flex-row">
       {isInterlude && (
         <button
-          className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+          className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4 "
           onClick={() => {
             // setUrl("https://www.youtube.com/embed/a2Hi80hGV04");
             setUrl(interludeUrl);
@@ -35,7 +35,7 @@ export default function VideosLink(props: any) {
       )}
       {isExplanation && (
         <button
-          className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+          className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4"
           onClick={() => {
             // setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
             setUrl(explanationUrl);
@@ -55,7 +55,7 @@ export default function VideosLink(props: any) {
       )}
       {isMeditation && (
         <button
-          className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+          className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4"
           onClick={() => {
             // setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
             setUrl(meditationUrl);
@@ -73,6 +73,6 @@ export default function VideosLink(props: any) {
           <span className="ml-1">Meditation</span>
         </button>
       )}
-    </>
+    </div>
   );
 }
