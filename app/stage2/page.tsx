@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 
 import {
@@ -7,7 +6,6 @@ import {
   AcademicCapIcon,
   FlagIcon,
   TrophyIcon,
-  PlayCircleIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";

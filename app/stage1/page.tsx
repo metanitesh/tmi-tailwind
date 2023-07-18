@@ -1,14 +1,11 @@
 "use client";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+
 import {
   NoSymbolIcon,
   AcademicCapIcon,
-  MapIcon,
   FlagIcon,
   TrophyIcon,
-  PlayIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";
@@ -44,33 +41,6 @@ const features = [
     icon: TrophyIcon,
   },
 ];
-
-// const features = [
-//   {
-//     name: "Push to deploy",
-//     description:
-//       "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-//     icon: CloudArrowUpIcon,
-//   },
-//   {
-//     name: "SSL certificates",
-//     description:
-//       "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-//     icon: LockClosedIcon,
-//   },
-//   {
-//     name: "Simple queues",
-//     description:
-//       "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-//     icon: ArrowPathIcon,
-//   },
-//   {
-//     name: "Advanced security",
-//     description:
-//       "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-//     icon: FingerPrintIcon,
-//   },
-// ];
 
 export default function Stage1() {
   const [open, setOpen] = useState(false);
@@ -110,26 +80,7 @@ export default function Stage1() {
               />
             </p>
           </div>
-          {/* <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-              {features.map((feature) => (
-                <div key={feature.name} className="relative pl-16">
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                      <feature.icon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-2 text-base leading-7 text-gray-600">
-                    {feature.description}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div> */}
+
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
               {features.map((feature) => (
@@ -155,44 +106,3 @@ export default function Stage1() {
     </>
   );
 }
-
-// export default function Stage1() {
-//   return (
-//     <div>
-//       <div className="navbar bg-base-100">
-//         <div className="flex-1">
-//           <a className="btn btn-ghost normal-case text-xl">TMI Meditation</a>
-//         </div>
-//         <div className="flex-none">
-//           <ul className="menu menu-horizontal px-1">
-//             <li>
-//               <Link href={"/stage1/theory"}>Theory</Link>
-//             </li>
-//             <li>
-//               <Link href={"/stage1/practice"}>Practice</Link>
-//             </li>
-//             <li>
-//               <Link href={"/stage1/mentoring"}>Mentoring</Link>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//       <div className="hero min-h-screen bg-base-200">
-//         <div className="hero-content text-center">
-//           <div className="max-w-md">
-//             <h1 className="text-5xl font-bold">
-//               Goal: Build a regular delegent practice.
-//             </h1>
-//             <p className="py-6">
-//               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-//               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-//               et a id nisi.
-//             </p>
-//             <button className="btn btn-primary">Get Started</button>
-//           </div>
-//         </div>
-//       </div>
-
-//     </div>
-//   );
-// }

@@ -3,32 +3,9 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 
-// import { Dialog, Transition } from '@headlessui/react'
-// import { Fragment, useState } from 'react'
-
 export default function Modal({ open, setOpen, url }: any) {
-  // let [isOpen, setIsOpen] = useState(true);
-
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
-
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-
   return (
     <>
-      {/* <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-      </div> */}
-
       <Transition appear show={open} as={Fragment}>
         <Dialog
           as="div"
@@ -116,7 +93,7 @@ export default function Modal({ open, setOpen, url }: any) {
                         top: 0,
                         left: 0,
                         width: "100%",
-                        height: "100%",
+                        height: "90%",
                         zIndex: 50,
                       }}
                       frameborder="0"
@@ -126,16 +103,6 @@ export default function Modal({ open, setOpen, url }: any) {
                       src={url}
                       id="widget2"
                     ></iframe>
-                    {/* <iframe
-                        frameborder="0"
-                        allowfullscreen="1"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        title="Welcome How To  Succeed FINAL"
-                        width="500px" height="500px"
-                        src={"https://www.youtube.com/embed/qPVqe4qjkms"}
-                        id="widget2"
-                        className="absolute top-10 left-10 bottom-10 right-10"
-                      ></iframe> */}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

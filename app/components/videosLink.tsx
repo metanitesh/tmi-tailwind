@@ -12,7 +12,7 @@ export default function VideosLink(props: any) {
     meditationUrl,
   } = props;
   return (
-    <div className="flex flex-col items-stretch gap-y-2  sm:p-0 sm:flex-row">
+    <div className="flex flex-col items-stretch gap-y-2  sm:p-0 sm:flex-row sm:justify-center">
       {isInterlude && (
         <button
           className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4 "
@@ -37,7 +37,6 @@ export default function VideosLink(props: any) {
         <button
           className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4"
           onClick={() => {
-            // setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
             setUrl(explanationUrl);
             setOpen(true);
           }}
@@ -57,7 +56,6 @@ export default function VideosLink(props: any) {
         <button
           className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4"
           onClick={() => {
-            // setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
             setUrl(meditationUrl);
             setOpen(true);
           }}
