@@ -50,7 +50,7 @@ export default function Stage2() {
               Stage7
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Exclusive attention and unifying the mind
+              Unification of mind
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               You can now investigate any object with however broad or narrow a

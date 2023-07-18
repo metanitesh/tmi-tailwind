@@ -50,7 +50,7 @@ export default function Stage2() {
               Stage6
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Subduing subtle distraction
+              Overcome subtle distraction
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Attention is fairly stable but still alternates between the

@@ -50,7 +50,7 @@ export default function Stage2() {
               Stage5
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Overcoming subtle dullness and increasing mindfulness
+              Overcome subtle dullness
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               You have overcome gross distractions and strong dullness, but

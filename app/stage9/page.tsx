@@ -50,8 +50,7 @@ export default function Stage2() {
               Stage9
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Mental and physical pliancy and calming the intensity of
-              meditative joy
+              Calming Meditative Joy
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               With mental and physical pliancy comes meditative joy, a unique

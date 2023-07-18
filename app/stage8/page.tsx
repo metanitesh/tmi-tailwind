@@ -19,7 +19,7 @@ const features = [
   {
     name: "Obstacles",
     description:
-      "he primary challenge is not to be distracted or distressed by the variety of extraordinary experiences during this Stage: unusual, and often unpleasant, sensations, involuntary movements, feelings of strong energy currents in the body, and intense joy. Simply let them be.",
+      "The primary challenge is not to be distracted or distressed by the variety of extraordinary experiences during this Stage: unusual, and often unpleasant, sensations, involuntary movements, feelings of strong energy currents in the body, and intense joy. Simply let them be.",
     icon: NoSymbolIcon,
   },
   {
@@ -50,7 +50,7 @@ export default function Stage2() {
               Stage8
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-orange-700 sm:text-4xl">
-              Mental pliancy and pacifying the senses
+              Pacifying the Senses
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               With mental pliancy, you can effortlessly sustain exclusive
