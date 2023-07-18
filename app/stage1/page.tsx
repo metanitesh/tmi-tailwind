@@ -1,14 +1,17 @@
+"use client";
 import Link from "next/link";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   NoSymbolIcon,
   AcademicCapIcon,
   MapIcon,
   FlagIcon,
   TrophyIcon,
+  PlayIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
 
 const features = [
   {
@@ -69,11 +72,14 @@ const features = [
 // ];
 
 export default function Stage1() {
+  const [open, setOpen] = useState(false);
+  const [url, setUrl] = useState("");
   return (
     <>
       <header className="bg-white">
         <Navbar></Navbar>
       </header>
+      <Modal open={open} setOpen={setOpen} url={url} />
       <div className="bg-white py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
@@ -90,26 +96,59 @@ export default function Stage1() {
               Diligence means engaging wholeheartedly in the practice rather
               than spending your time on the cushion planning or daydreaming.
             </p>
-            {/* <p className="pt-6">
-              <Link
-                href="/stage1/theory"
+            <p className="pt-6">
+              <button
                 className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/a2Hi80hGV04");
+                  setOpen(true);
+                }}
               >
-                Theory
-              </Link>
-              <Link
-                href="/stage1/theory"
-                className="bg-orange-600 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mr-4"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 inline-block"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+                <span className="ml-2">Interlude</span>
+              </button>
+              <button
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
+                  setOpen(true);
+                }}
               >
-                Practice
-              </Link>
-              <Link
-                href="/stage1/theory"
-                className="bg-orange-600 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded mr-4"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 inline-block"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+                <span className="ml-2">Explanation</span>
+              </button>
+              <button
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
+                  setOpen(true);
+                }}
               >
-                Mentoring
-              </Link>
-            </p> */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 inline-block"
+                >
+                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                </svg>
+                <span className="ml-2">Guided Meditation</span>
+              </button>
+            </p>
           </div>
           {/* <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">

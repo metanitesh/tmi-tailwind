@@ -115,7 +115,7 @@ export default function Navbar() {
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-orange-700">
               Stages
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-orange-700"
+                className="h-5 w-5 flex-none"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -181,10 +181,11 @@ export default function Navbar() {
         </div> */}
         <div className="flex">
           <Link
-            href="/auth"
-            className="-m-1.5 p-10 text-sm font-semibold leading-6 text-orange-700"
+            href="https://calendly.com/nitesh-grep/30min?month=2023-07"
+            target="_blank"
+            className="-m-1.5 p-10 text-sm font-semibold leading-6 text-orange-700 underline"
           >
-            Sign up
+            One to One session
           </Link>
         </div>
       </nav>

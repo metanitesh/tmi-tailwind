@@ -48,12 +48,23 @@ export async function POST(request: Request, response: Response) {
     const token = jwt.sign(username, process.env.JWT_SECRET);
 
     console.log("token", token);
-    return NextResponse.json(
-      {
-        token: token,
+
+    return NextResponse.redirect(new URL("/protected", request.url), {
+      headers: {
+        "Set-Cookie": `token=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000`,
       },
-      { status: 200 }
-    );
+    });
+    // return NextResponse.json(
+    //   {
+    //     token: token,
+    //   },
+    //   {
+    //     status: 200,
+    //     headers: {
+    //       "Set-Cookie": `token=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=31536000`,
+    //     },
+    //   }
+    // );
     // return jwt.sign({ username }, process.env.JWT_SECRET,)}
   } catch (error: any) {
     console.log("catch", error);

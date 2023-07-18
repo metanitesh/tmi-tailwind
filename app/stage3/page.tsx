@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import React from "react";
 
@@ -8,6 +9,7 @@ import {
   TrophyIcon,
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
+import Modal from "../components/modal";
 
 const features = [
   {
@@ -35,11 +37,16 @@ const features = [
 ];
 
 export default function Stage2() {
+  const [open, setOpen] = React.useState(false);
+  const [url, setUrl] = React.useState("");
+
   return (
+    
     <>
       <header className="bg-white">
         <Navbar></Navbar>
       </header>
+      <Modal open={open} setOpen={setOpen} url={url} />
       <div className="bg-white py-10 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
@@ -55,6 +62,37 @@ export default function Stage2() {
               and dullness, and make corrections as soon as you notice their
               presence. once it becomes a habit you will rarely forget the
               breath.
+            </p>
+            <p className="pt-6">
+              
+              <button
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/a2Hi80hGV04");
+                  setOpen(true);
+                }}
+              >
+                Interlude
+              </button>
+              <button
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
+                  setOpen(true);
+                }}
+              >
+                Explanation
+              </button>
+              <button
+                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
+                onClick={() => {
+                  setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
+                  setOpen(true);
+                }}
+              >
+                Guided Meditation
+              </button>
+            
             </p>
           </div>
 
