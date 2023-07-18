@@ -12,6 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";
+import VideosLink from "../components/videosLink";
 
 const features = [
   {
@@ -97,57 +98,16 @@ export default function Stage1() {
               than spending your time on the cushion planning or daydreaming.
             </p>
             <p className="pt-6">
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/a2Hi80hGV04");
-                  setOpen(true);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5 inline-block"
-                >
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-                <span className="ml-1">Interlude</span>
-              </button>
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
-                  setOpen(true);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5 inline-block"
-                >
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-                <span className="ml-1">Explanation</span>
-              </button>
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
-                  setOpen(true);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5 inline-block"
-                >
-                  <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                </svg>
-                <span className="ml-1">Meditation</span>
-              </button>
+              <VideosLink
+                isInterlude={true}
+                isExplanation={true}
+                isMeditation={true}
+                setOpen={setOpen}
+                setUrl={setUrl}
+                interludeUrl="https://www.youtube.com/embed/a2Hi80hGV04"
+                explanationUrl="https://www.youtube.com/embed/qPVqe4qjkms"
+                meditationUrl="https://www.youtube.com/embed/V4neg7SVDKc"
+              />
             </p>
           </div>
           {/* <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

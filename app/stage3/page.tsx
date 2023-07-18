@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Navbar from "../components/navbar";
 import Modal from "../components/modal";
+import VideosLink from "../components/videosLink";
 
 const features = [
   {
@@ -41,7 +42,6 @@ export default function Stage2() {
   const [url, setUrl] = React.useState("");
 
   return (
-    
     <>
       <header className="bg-white">
         <Navbar></Navbar>
@@ -64,35 +64,12 @@ export default function Stage2() {
               breath.
             </p>
             <p className="pt-6">
-              
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/a2Hi80hGV04");
-                  setOpen(true);
-                }}
-              >
-                Interlude
-              </button>
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/qPVqe4qjkms");
-                  setOpen(true);
-                }}
-              >
-                Explanation
-              </button>
-              <button
-                className="bg-orange-600 hover:bg-orange-600 text-white py-2 px-4 rounded mr-4"
-                onClick={() => {
-                  setUrl("https://www.youtube.com/embed/V4neg7SVDKc");
-                  setOpen(true);
-                }}
-              >
-                Guided Meditation
-              </button>
-            
+              <VideosLink
+                isExplanation={true}
+                explanationUrl="https://www.youtube.com/embed/vFt5i2sctbc"
+                setOpen={setOpen}
+                setUrl={setUrl}
+              />
             </p>
           </div>
 
