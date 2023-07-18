@@ -12,7 +12,7 @@ export default function VideosLink(props: any) {
     meditationUrl,
   } = props;
   return (
-    <div className="flex flex-col items-stretch gap-y-2 px-20 sm:p-0 sm:flex-row">
+    <div className="flex flex-col items-stretch gap-y-2  sm:p-0 sm:flex-row">
       {isInterlude && (
         <button
           className="bg-orange-600 hover:bg-orange-600 text-white p-4 sm:py-2 sm:px-4 rounded mr-4 "
