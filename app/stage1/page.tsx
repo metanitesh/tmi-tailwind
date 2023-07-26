@@ -37,7 +37,7 @@ const features = [
   // },
   {
     name: "Mastery",
-    description: "Never missing a daily practice session",
+    description: "Never missing a daily practice session.",
     icon: TrophyIcon,
   },
 ];
